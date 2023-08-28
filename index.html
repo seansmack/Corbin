@@ -8,32 +8,71 @@
             crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
           rel="stylesheet">
-<!--REFERENCE: https://www.wetlandsirrigationllc.com/-->
+    <!--REFERENCE: https://www.wetlandsirrigationllc.com/-->
+
     <style>
         body {
             font-family: 'Roboto', serif;
         }
+
+        .grow-border {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .grow-border::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: red;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .grow-border:hover::before {
+            width: 100%;
+        }
     </style>
+
 </head>
-<body>
+
+<body class="bg-[#FEF9F3] text-">
 <div class="bg-[#4F963C] p-3 font-bold flex items-center justify-center text-white text-center">
     <span class="mr-2">
 <!--        Briefcase icon-->
         <div class="text-lg"><i class="fa-solid fa-phone"></i></div>
     </span>
-    <span class="ml-2">Have any questions? Contact us today!</span>
-    <span class="/cursor-pointer underline ml-2">(555)555-5555</span>
+    <span class="ml-2">Have a question? Contact us today!</span>
+    <span class="cursor-pointer underline ml-2">(555)555-5555</span>
 </div>
-<div class="bg-red-500 w-[1450px] h-[50px] items-center flex mx-auto">
-    <!--    LOGO GOES HERE-->
-    <span>LLOYD LANDSCAPING PLACEHOLDER</span>
+<div class="border-gray-300 drop-shadow-2xl border-b w-[1450px] h-[50px] flex mx-auto justify-between items-center px-4">
+    <span class="text-4xl drop-shadow-xl hover:animate-spin duration-100 text-[#4F963C]"><i class="fa-solid fa-sun"></i></span>
+    <div class="flex mr-4 gap-20 tracking font-bold italic text-sm">
+        <div class="grow-border">CHALLENGES</div>
+        <div class="grow-border">SOLUTIONS</div>
+        <div class="grow-border">RESOURCES</div>
+    </div>
+
 </div>
-<div class="bg-blue-500 bg-[url(https://thumbs.dreamstime.com/z/lawn-mower-green-55831737.jpg?w=2048)] shadow-5xl shadow-inner bg-no-repeat bg-cover flex items-center justify-center h-[400px] w-full">
+<div style="background-size: 100%;" class="bg-blue-500 /drop-shadow-2xl shadow-2xl
+bg-[url(https://wallpapercave.com/wp/wp4694290.jpg)]
+bg-no-repeat bg-cover flex items-center justify-center h-[400px] w-full">
     <!--    <img src="https://thumbs.dreamstime.com/z/lawn-mower-green-55831737.jpg?w=2048" class="object-cover h-96 w-full" alt="">-->
-    <div class="text-white font-bold text-[85px] text-center leading-tight shadow-inner">QUALITY SERVICE.<br>
-    AFFORDABLE PRICES.
-        <p class="text-[35px] font-normal">Transforming lawns with your budget in mind</p>
+    <div class="text-white h-full font-bold text-[85px] text-center leading-tight backdrop-blur-sm rounded-3xl p-8"><span
+            style="text-shadow: 1px 1px 2px black;">QUALITY SERVICE.<br>
+    AFFORDABLE PRICES.</span>
+        <p style="text-shadow: 1px 1px 2px black;" class="text-[35px] text-[#FFFF33] font-medium">Transforming lawns
+            with your budget in mind</p>
+        <div class="pt-5 flex drop-shadow-2xl cursor-pointer justify-center">
+            <div class="bg-[#4F963C] text-lg py-2 px-2 rounded-3xl">Contact Us Today</div>
+            <div>
+            </div>
+        </div>
     </div>
 </div>
+<div class="flex justify-center">hey</div>
 </body>
 </html>
